@@ -11,20 +11,26 @@ namespace Shopping.Controllers
 {
     public class CountriesController : Controller
     {
+        //readonly
         private readonly DataContext _context;
-
+        //TAREA SINCRONICAS: TAREAS SE EJECUTAN AL MISMO TIEMPO
+        //TAREA ASINCRONAS: TAREAS QUE SE EJECUTAN EN DIFERENTE TIEMPO
         public CountriesController(DataContext context)
         {
             _context = context;
         }
 
         // GET: Countries
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
+                                    //SELECT * FROM COUNTRIES
             return View(await _context.Countries.ToListAsync());
         }
 
         // GET: Countries/Details/5
+        [HttpGet]
+                                    //PARAMETROS ? POSIBLEMENTE VIENE
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -32,7 +38,7 @@ namespace Shopping.Controllers
                 return NotFound();
             }
 
-            var country = await _context.Countries
+            Country country = await _context.Countries
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (country == null)
             {
@@ -48,12 +54,10 @@ namespace Shopping.Controllers
             return View();
         }
 
-        // POST: Countries/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+      
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name")] Country country)
+        public async Task<IActionResult> Create(Country country)
         {
             if (ModelState.IsValid)
             {
