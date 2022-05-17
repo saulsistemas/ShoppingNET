@@ -148,3 +148,5 @@ C:\Projects\Shopping\Shopping\Shopping\obj\Debug\net5.0\Razor\Views\Countries\De
 C:\Projects\Shopping\Shopping\Shopping\obj\Debug\net5.0\Razor\Views\Countries\Details.cshtml.g.cs
 C:\Projects\Shopping\Shopping\Shopping\obj\Debug\net5.0\Razor\Views\Countries\Edit.cshtml.g.cs
 C:\Projects\Shopping\Shopping\Shopping\obj\Debug\net5.0\Razor\Views\Countries\Index.cshtml.g.cs
+C:\Projects\Shopping\Shopping\Shopping\obj\Debug\net5.0\Razor\Views\Countries\_Country.cshtml.g.cs
+C:\Projects\Shopping\Shopping\Shopping\obj\Debug\net5.0\Razor\Views\Countries\_CountryDetails.cshtml.g.cs
